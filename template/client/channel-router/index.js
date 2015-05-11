@@ -17,7 +17,6 @@ export default plugin;
  */
 
 function plugin(options) {
-  // ...
   var rootUrl = '/';
 
   return function(app){
