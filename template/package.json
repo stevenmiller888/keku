@@ -1,0 +1,24 @@
+{
+  "name": "{{ name }}",
+  {{#private}}
+  "private": true,
+  {{/private}}
+  "description": "{{ description }}",
+  "author": "{{ author }}",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/{{ author }}/{{ name }}"
+  },
+  "main": "server/index.js",
+  "dependencies": {
+    "babel": "^5.2.17",
+    "duo-babel": "^5.4.0",
+    "duo-myth": "^0.1.0",
+    "koa": "^0.20.0"
+  },
+  "devDependencies": {
+    "jscs": "1.12.0",
+    "mocha": "2.x"
+  }
+}

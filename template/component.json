@@ -1,0 +1,6 @@
+{
+  "name": "{{ name }}",
+  "dependencies": {
+    "segmentio/deku": "~0.2.16"
+  }
+}
