@@ -4,8 +4,8 @@
  */
 
 var bodyParser = require('koa-body-parser');
-var serve = require('koa-static');
-var mount = require('koa-mount');
+var logger = require('koa-logger');
+var render = require('./render');
 var koa = require('koa');
 
 /**
@@ -15,17 +15,10 @@ var koa = require('koa');
 var app = koa();
 
 /**
- * Config.
+ * Logging middleware.
  */
 
-app.name = '{{ name }}';
-app.port = process.env.PORT || 3000;
-
-/**
- * Serve.
- */
-
-app.use(mount('/build'), serve('build'));
+app.use(logger());
 
 /**
  * Body parsing middleware.
@@ -34,9 +27,15 @@ app.use(mount('/build'), serve('build'));
 app.use(bodyParser());
 
 /**
+ * Render.
+ */
+
+app.use(function *(){
+  yield render('index');
+});
+
+/**
  * Listen.
  */
 
-app.listen(app.port, function(){
-  console.log('\n%s listening at http://%s/\n', app.name, app.port);
-});
+app.listen(process.env.PORT || 3000);
