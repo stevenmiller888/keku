@@ -10,7 +10,7 @@ import {dom} from 'segmentio/deku';
  */
 
 export var propTypes = {
-  // ...
+  route: { type: 'object', source: 'currentRoute' }
 };
 
 /**
@@ -18,11 +18,14 @@ export var propTypes = {
  */
 
 export function render({ props, state }, setState){
-  // ...
+  let route = props.route;
+
+  // Keep UI transitions clean
+  if (!route) return <noscript></noscript>
 
   return (
     <div class='App'>
-      // ...
+      <h1>route.name</h1>
     </div>
   );
 }
