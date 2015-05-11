@@ -17,20 +17,22 @@ export default plugin;
  */
 
 function plugin(options) {
-  // ...
 
   /**
    * Dispatcher.
    */
 
   dispatcher
-    .on('', () => );
+    // .on('model.create', () => return '');
+    // .on('model.get',    () => return '');
+    // .on('model.update', () => return '');
+    // .on('model.delete', () => return '');
 
   /**
    * Whenever the model changes, set a prop on the app.
    */
 
   return function(app){
-    // ...
+    // model.on('change', () => app.set());
   };
 }
