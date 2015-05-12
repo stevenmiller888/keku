@@ -4,6 +4,7 @@
  * Imports.
  */
 
+import style from './index.css';
 import {dom} from 'deku';
 
 /**
