@@ -1,2 +1,3 @@
-/* Components */
-@import './app';
+body {
+  background: #ffffff;
+}
