@@ -4,7 +4,7 @@
  * Imports.
  */
 
-import {tree,render,dom} from 'segmentio/deku';
+import {tree,render,dom} from 'deku';
 import router from './channel-router';
 import * as App from './app';
 
