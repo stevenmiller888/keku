@@ -1,72 +1,38 @@
-#
-# Environment.
-#
-
-NODE := node --harmony
 
 #
 # Binaries.
 #
 
 BIN := ./node_modules/.bin
-MOCHA := $(BIN)/mocha
-DUO := $(BIN)/duo
-
-DUO_FLAGS := --quiet --copy --use ./server/duo/plugins.js
-
-#
-# Wildcards.
-#
-
-CSS := $(shell find client/index.css)
-JS := $(shell find client/index.js)
-
-#
-# Default.
-#
-
-default: build
+DUO := $(BIN)/duo --root client
 
 #
 # Build.
 #
 
-build: $(addprefix build/, $(JS) $(CSS)) | node_modules
-
-#
-# Target for `build/*.js` files.
-#
-
-build/%.js: %.js
-	@$(DUO) $(DUO_FLAGS) $<
-
-#
-# Target for `build/*.css` files.
-#
-
-build/%.css: %.css
-	@$(DUO) $(DUO_FLAGS) $<
+build: node_modules
+	@$(DUO) index.js --stdout --use duo-babel > build.js
+	@$(DUO) index.css --stdout --use duo-myth > build.css
 
 #
 # Server.
 #
 
 server:
-	@$(NODE) ./server
+	@node --harmony ./server
 
 #
 # Clean.
 #
 
-clean: client-client
+clean: clean-client
 
 #
 # Clean client.
 #
 
 clean-client:
-	@rm -rf build components
-	@$(DUO) clean-cache --quiet
+	@rm -rf build build.js build.css components
 
 #
 # Clean server.
@@ -75,16 +41,6 @@ clean-client:
 client-server:
 	@rm -rf node_modules
 	@npm cache clean
-
-#
-# Tests.
-#
-
-test: node_modules
-	@$(BIN)/mocha test --reporter spec
-
-test-style:
-	$(BIN)/jscs lib test
 
 #
 # Target for `node_modules` folder.
@@ -97,4 +53,4 @@ node_modules: package.json
 # Phonies.
 #
 
-.PHONY: build test test-style clean clean-client client-server server
+.PHONY: build clean clean-client client-server server
