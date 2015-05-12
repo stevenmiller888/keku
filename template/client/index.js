@@ -1,9 +1,11 @@
+/** @jsx dom */
 
 /**
  * Imports.
  */
 
 import {tree,render,dom} from 'segmentio/deku';
+import router from './channel-router';
 import * as App from './app';
 
 /**
@@ -17,12 +19,6 @@ var app = tree(<App/>);
  */
 
 app.use(router());
-
-/**
- * Create the store channel.
- */
-
-app.use(store());
 
 /**
  * Render.
