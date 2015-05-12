@@ -6,15 +6,13 @@
 BIN := ./node_modules/.bin
 DUO := $(BIN)/duo
 BROWSERIFY := $(BIN)/browserify
-BABELIFY := $(BIN)/babelify
 
 #
 # Build.
 #
 
 build: node_modules
-	@$(BROWSERIFY) client/index.js -t babelify > build.js
-	@$(DUO) client/index.css --stdout --quiet --use duo-myth > build.css
+	@$(BROWSERIFY) -t cssify -t babelify client/index.js > build.js
 
 #
 # Server.
