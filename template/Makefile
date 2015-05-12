@@ -11,8 +11,8 @@ DUO := $(BIN)/duo --root client
 #
 
 build: node_modules
-	@$(DUO) index.js --stdout --use duo-babel > build.js
-	@$(DUO) index.css --stdout --use duo-myth > build.css
+	@$(DUO) index.js --stdout --quiet --use duo-babel > build.js
+	@$(DUO) index.css --stdout --quiet --use duo-myth > build.css
 
 #
 # Server.
