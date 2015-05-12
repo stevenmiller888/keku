@@ -33,4 +33,4 @@ architecture. On the server, a Koa application boilerplate is provided with a fe
 
 ## License
 
-[MIT](https://tldrlegal.com/license/mit-license)
+MIT
