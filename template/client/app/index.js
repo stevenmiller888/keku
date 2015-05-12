@@ -11,7 +11,7 @@ import {dom} from 'segmentio/deku';
  */
 
 export var propTypes = {
-  route: { type: 'string', source: 'currentRoute' }
+  route: { type: 'object', source: 'currentRoute' }
 };
 
 /**
