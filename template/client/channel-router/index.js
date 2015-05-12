@@ -28,13 +28,15 @@ function plugin(options) {
 
     dispatcher
       .on('router.index', () => router.go(rootUrl));
-
+      // ...
+      
     /**
      * Router.
      */
 
     router
-      .on('/', (ctx) => app.set('route', { name: 'index' });
+      .on('/', (ctx) => app.set('currentRoute', { name: 'index' }));
+      // ... add more routes
 
     /**
      * Start the router
