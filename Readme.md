@@ -1,5 +1,5 @@
 
-# keku (WIP)
+# keku
 
 >  A template for quickly building Koa + Deku applications with ES6 support.
 
