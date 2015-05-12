@@ -3,8 +3,8 @@
  * Imports.
  */
 
-import router from 'page';
 import dispatcher from '../dispatcher';
+import router from 'page';
 
 /**
  * Expose `plugin`.
