@@ -3,7 +3,7 @@
 
 >  A template for quickly building Koa + Deku applications with ES6 support.
 
-![](http://f.cl.ly/items/413Q2e2S043Q0s1D0i47/Screen%20Shot%202015-05-11%20at%209.48.51%20PM.png)
+![](http://f.cl.ly/items/393h1R3w2V0v3V1p2y2G/Screen%20Shot%202015-05-12%20at%204.36.01%20PM.png)
 
 ## Installation
 
