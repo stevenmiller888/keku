@@ -7,7 +7,6 @@ var stream = require('fs').createReadStream;
 var bodyParser = require('koa-body-parser');
 var logger = require('koa-logger');
 var join = require('path').join;
-var fs = require('co-fs');
 var koa = require('koa');
 
 /**
