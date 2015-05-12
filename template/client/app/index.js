@@ -1,3 +1,4 @@
+/** @jsx dom */
 
 /**
  * Imports.
@@ -10,7 +11,7 @@ import {dom} from 'segmentio/deku';
  */
 
 export var propTypes = {
-  route: { type: 'object', source: 'currentRoute' }
+  route: { type: 'string', source: 'currentRoute' }
 };
 
 /**
@@ -21,11 +22,11 @@ export function render({ props, state }, setState){
   let route = props.route;
 
   // Keep UI transitions clean
-  if (!route) return <noscript></noscript>
+  if (!route) return <noscript></noscript>;
 
   return (
     <div class='App'>
-      <h1>route.name</h1>
+      <h1>{route.name}</h1>
     </div>
   );
 }
