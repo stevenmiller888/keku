@@ -3,7 +3,7 @@
  * Imports.
  */
 
-import Router from 'ianstormtaylor/router';
+import router from 'page';
 import dispatcher from '../dispatcher';
 
 /**
@@ -20,23 +20,20 @@ function plugin(options) {
   var rootUrl = '/';
 
   return function(app){
-    var router = new Router();
 
     /**
      * Dispatcher.
      */
 
-    dispatcher
-      .on('router.index', () => router.go(rootUrl));
-      // ...
+    dispatcher.on('router.index', () => router.show(rootUrl));
+    // ...
       
     /**
      * Router.
      */
 
-    router
-      .on('/', (ctx) => app.set('currentRoute', { name: 'index' }));
-      // ... add more routes
+    router('/', () => app.set('currentRoute', { name: 'index' }));
+    // ... add more routes
 
     /**
      * Start the router
