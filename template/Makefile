@@ -38,7 +38,7 @@ clean-client:
 # Clean server.
 #
 
-client-server:
+clean-server:
 	@rm -rf node_modules
 	@npm cache clean
 
