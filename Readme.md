@@ -1,5 +1,5 @@
 
-# khaos-app (WIP)
+# keku (WIP)
 
 >  A template for quickly building Koa + Deku applications with ES6 support.
 
@@ -16,7 +16,7 @@ $ npm install -g khaos
 Then install the template locally:
 
 ```bash
-$ khaos install stevenmiller888/khaos-app
+$ khaos install stevenmiller888/keku
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ $ khaos install stevenmiller888/khaos-app
 Create the app with the following command:
 
 ```bash
-$ khaos create app my-project
+$ khaos create keku my-project
 ```
 
 The app is organized into two folders, client and server. You can use ES6 syntax in
