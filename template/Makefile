@@ -97,4 +97,4 @@ node_modules: package.json
 # Phonies.
 #
 
-.PHONY: build test test-style clean distclean
+.PHONY: build test test-style clean clean-client client-server server
