@@ -3,10 +3,11 @@
  * Imports.
  */
 
-import Emitter from 'component/emitter@1.1.3';
+import events from 'events';
 
 /**
  * Expose a singleton emitter
  */
 
+var Emitter = events.EventEmitter;
 export default new Emitter();
