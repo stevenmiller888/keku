@@ -22,7 +22,7 @@ $ khaos install stevenmiller888/khaos-app
 Create the app with the following command:
 
 ```bash
-$ khaos app my-project
+$ khaos create app my-project
 ```
 
 The app is organized into two folders, client and server. You can use ES6 syntax in
