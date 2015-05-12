@@ -4,7 +4,7 @@
  * Imports.
  */
 
-import {dom} from 'segmentio/deku';
+import {dom} from 'deku';
 
 /**
  * Define `App` properties.
